@@ -46,11 +46,14 @@ PDF notes. And then the notes can be distributed among the students.</p>
  ```
 
 
-<p><b>Step 3 : </b> </p>
+<p><b>Step 3 : </b>In the main loop , We have opened a text file in active mode in which we can write the recognised words of the teacher. </p>
 
   ```py
-     pip install SpeechRegonition
-     pip install PyAudio
+     while True: 
+     with open("notes.txt", "a") as f: 
+         data = listen().lower() 
+         f.write(f"{data}\n") 
+         pdf.multi_cell(0, 10, data)
  ```
 
 
