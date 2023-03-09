@@ -24,3 +24,37 @@ PDF notes. And then the notes can be distributed among the students.</p>
      pip install PyAudio
  ```
 
+
+<p><b>Step 2 : </b> </p>
+
+  ```py
+     pip install SpeechRegonition
+     pip install PyAudio
+ ```
+
+
+<p><b>Step 3 : </b> </p>
+
+  ```py
+     pip install SpeechRegonition
+     pip install PyAudio
+ ```
+
+
+
+<p><b>Step 4 : </b> </p>
+
+  ```py
+     pip install SpeechRegonition
+     pip install PyAudio
+ ```
+
+
+<p><b>Step 5 : </b> </p>
+
+  ```py
+     pip install SpeechRegonition
+     pip install PyAudio
+ ```
+
+
