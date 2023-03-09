@@ -4,7 +4,8 @@
 PDF notes. And then the notes can be distributed among the students.</p>
 
 <h2> Modules Required ~ </h2>
-<br/>
+
+
   ```sh
      pip install SpeechRegonition
      pip install PyAudio
