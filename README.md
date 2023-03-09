@@ -1,1 +1,1 @@
-# Live-Notes-Maker
+<h1 align="center"> Lecture2Notes</h1>
