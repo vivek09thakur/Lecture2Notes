@@ -9,6 +9,7 @@ PDF notes. And then the notes can be distributed among the students.</p>
   ```sh
      pip install SpeechRegonition
      pip install PyAudio
+     pip install fpdf
  ```
 
 <p><b><a href="#">Note ~ </a></b>
