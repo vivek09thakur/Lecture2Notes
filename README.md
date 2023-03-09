@@ -17,11 +17,11 @@ PDF notes. And then the notes can be distributed among the students.</p>
 
 <h2> How it works </h2>
 
-<p><b>Step 1 : </b> </p>
+<p><b>Step 1 : </b> First the program starts by importing the required modules</p>
 
   ```py
-     pip install SpeechRegonition
-     pip install PyAudio
+     import speech_recognition as sr
+     import fpdf
  ```
 
 
