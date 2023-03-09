@@ -58,19 +58,14 @@ PDF notes. And then the notes can be distributed among the students.</p>
 
 
 
-<p><b>Step 4 : </b> </p>
+<p><b>Step 4 : </b>Finally we converted the text file into notes.pdf which can be distributed among the students. </p>
 
   ```py
-     pip install SpeechRegonition
-     pip install PyAudio
+     # Convert the text file to PDF after writing 
+     with open("notes.txt", "r") as file: 
+         text = file.read() 
+     pdf.output("notes.pdf")
  ```
 
-
-<p><b>Step 5 : </b> </p>
-
-  ```py
-     pip install SpeechRegonition
-     pip install PyAudio
- ```
 
 
