@@ -26,11 +26,23 @@ PDF notes. And then the notes can be distributed among the students.</p>
  ```
 
 
-<p><b>Step 2 : </b> </p>
+<p><b>Step 2 : </b>Then we have a function named Listen() that listen to teachers words. </p>
 
   ```py
-     pip install SpeechRegonition
-     pip install PyAudio
+     def listen(): 
+     r = sr.Recognizer() 
+     with sr.Microphone() as source: 
+         r.adjust_for_ambient_noise(source) 
+         audio = r.listen(source) 
+     try: 
+         query = r.recognize_google(audio, language='en-in') 
+         query = query.lower() 
+     except Exception as e: 
+         print(e) 
+         print("Unable to recognize") 
+         return "none" 
+  
+     return query
  ```
 
 
