@@ -14,3 +14,13 @@ PDF notes. And then the notes can be distributed among the students.</p>
 <p><b><a href="#">Note ~ </a></b>
 
 > Teacher must wears a headset or a Bluetooth headphones. And the Audio Input of the Laptop \ PC must set to headphones. So the Program can work perfectly</p>
+
+<h2> How it works </h2>
+
+<p><b>Step 1 : </b> </p>
+
+  ```py
+     pip install SpeechRegonition
+     pip install PyAudio
+ ```
+
