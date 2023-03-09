@@ -22,7 +22,7 @@ PDF notes. And then the notes can be distributed among the students.</p>
 
   ```py
      import speech_recognition as sr
-from fpdf import FPDF
+     from fpdf import FPDF
  ```
 
 
