@@ -10,3 +10,5 @@ PDF notes. And then the notes can be distributed among the students.</p>
      pip install SpeechRegonition
      pip install PyAudio
  ```
+
+<h2><a href="#">Note ~ </a>Teacher must wears a headset or a Bluetooth headphones. And the Audio Input of the Laptop \ PC must set to headphones. So the Program can work perfectly</h2>
