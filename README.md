@@ -1,4 +1,4 @@
-<h1 align="center"> Lecture2Notes 📒📑</h1>
+<h1 align="center"> Lecture2Notes 📒</h1>
 
 > Converts Words of Teacher into class notes live!
 <p> Implementing a program that takes continues voice input and then write it in a text file which converted in
