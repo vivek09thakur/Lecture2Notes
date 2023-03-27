@@ -32,6 +32,7 @@ while True:
     if 'class over' in data:
         break
     # Convert the text file to PDF after writing
-    with open("notes.txt", "r") as file:
-        text = file.read()
-    pdf.output("notes.pdf")
+    
+with open("notes.txt", "r") as file:
+    text = file.read()
+pdf.output("notes.pdf")
