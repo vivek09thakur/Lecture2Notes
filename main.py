@@ -23,8 +23,8 @@ pdf.add_page()
 pdf.set_font("Arial", size=12)
 
 while True:
+    data = listen().lower()
     with open("notes.txt", "a") as f:
-        data = listen().lower()
         f.write(f"{data}\n")
         pdf.multi_cell(0, 10, data)
 
