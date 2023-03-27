@@ -23,11 +23,14 @@ pdf.add_page()
 pdf.set_font("Arial", size=12)
 
 while True:
+    
     data = listen().lower()
     with open("notes.txt", "a") as f:
         f.write(f"{data}\n")
         pdf.multi_cell(0, 10, data)
 
+    if 'class over' in data:
+        break
     # Convert the text file to PDF after writing
     with open("notes.txt", "r") as file:
         text = file.read()
