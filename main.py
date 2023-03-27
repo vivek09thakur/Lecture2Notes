@@ -10,6 +10,7 @@ def listen():
     try:
         query = r.recognize_google(audio, language='en-in')
         query = query.lower()
+        print(f'words recognised : {query}')
     except Exception as e:
         print(e)
         print("Unable to recognize")
