@@ -10,7 +10,7 @@ def listen():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source)
-        audio = r.listen(source,phrase_time_limit=5)
+        audio = r.listen(source,phrase_time_limit=10)
     try:
         query = r.recognize_google(audio, language='en-in')
         query = query.lower()
@@ -54,4 +54,3 @@ with open("notes.txt", "r") as file:
 with open("notes.pdf", "w") as file:
     pdf.output("notes.pdf",'F')
     
-os.remove("notes.txt")
