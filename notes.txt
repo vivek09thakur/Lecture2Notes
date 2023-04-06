@@ -1,0 +1,7 @@
+hello
+this is the test of
+my command line Python app
+that can convert live lectures to notes
+I hope you will all like it
+so thank you
+class over
