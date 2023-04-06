@@ -17,7 +17,7 @@ stream.start_stream()
 def listen():
     
     frames = []
-    for i in range(0, int(16000 / 8192 * 3)):
+    for i in range(0, int(16000 / 8192 * 10)):
         data = stream.read(8192)
         frames.append(data)
     data = b''.join(frames)
