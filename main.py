@@ -2,7 +2,6 @@ from voice_recognition import listen_to_teacher
 from fpdf import FPDF
 import speech_recognition as sr
 
-
 pdf = FPDF()
 pdf.add_page()
 pdf.set_font("Arial", size=12)
@@ -14,7 +13,6 @@ except FileNotFoundError:
     text = ""
 # Add the existing text to the PDF
 pdf.multi_cell(0, 10, text)
-
 
 if __name__=='__main__':
     
