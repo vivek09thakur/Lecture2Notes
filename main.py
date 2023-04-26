@@ -23,7 +23,7 @@ if __name__=='__main__':
             with open("notes.txt", "a") as f:
                 f.write(f"{data}\n")
                 pdf.multi_cell(0, 10, data)
-            if 'class over' in data:
+            if 'over' in data:
                 break 
     with open("notes.txt", "r") as file:
         text = file.read()
