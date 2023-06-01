@@ -11,7 +11,8 @@ try:
         text = file.read()
 except FileNotFoundError:
     text = ""
-# Add the existing text to the PDF
+
+
 pdf.multi_cell(0, 10, text)
 
 if __name__=='__main__':
