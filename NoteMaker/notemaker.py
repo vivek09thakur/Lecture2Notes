@@ -1,7 +1,5 @@
 import speech_recognition as sr
-import pyaudio
 import wave
-import pyautogui
 from fpdf import FPDF
 
 class NOTEMAKER:
@@ -11,27 +9,36 @@ class NOTEMAKER:
         self.pdf = FPDF()
         self.pdf.add_page()
         self.pdf.set_font("Arial", size=12)
-        self.pyaudio = pyaudio.PyAudio()
+    
         
-    def record_wave(self, filename):
-        print('RECORDING STARTED (PRESS Q TO STOP)')
-        stream = self.pyaudio.open(format=pyaudio.paInt16, 
-                            channels=1, rate=44100, 
-                            input=True, 
-                            frames_per_buffer=1024)
-        frames = []
-        while True:
-            data = stream.read(1024)
-            frames.append(data)
-            if pyautogui.keyDown('n'):
-                break
-        stream.stop_stream()
-        stream.close()
-        wf = wave.open(filename, 'wb')
-        wf.setnchannels(1)
-        wf.setsampwidth(self.pyaudio.get_sample_size(pyaudio.paInt16))
-        wf.setframerate(44100)
-        wf.writeframes(b''.join(frames))
+    def record_wave(self, filename,class_duration):
+        print('RECORDING STARTED [PRESS CTRL+C TO STOP RECORDING]')
+        try:
+            try:
+                with sr.Microphone() as source:
+                    audio_data = self.r.adjust_for_ambient_noise(source)
+                    audio_data = self.r.listen(source,
+                                               timeout=class_duration,
+                                    phrase_time_limit=class_duration)
+                    
+                    with open(filename, "wb") as file:
+                        file.write(audio_data.get_wav_data())
+                    print("RECORDING STOPPED\nFILE SAVED AS "+filename)
+                    
+            except sr.RequestError:
+                print("API was unreachable or unresponsive")
+                pass
+            except sr.UnknownValueError:
+                print("Unable to recognize speech")
+                pass
+            except sr.WaitTimeoutError:
+                print("No speech detected within the given timeout")
+                pass
+            except Exception as e:
+                print(f'EXCEPTION OCCURED => {e}')
+        except KeyboardInterrupt:
+            print('RECORDING STOPPED')
+            pass
     
     def transcribe(self, filename):
         with sr.AudioFile(filename) as source:
